@@ -1,0 +1,78 @@
+.form_prueba {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.39);
+    background-color: rgba(219, 219, 219, 0.32);
+}
+  
+  .form_prueba form {
+    margin-bottom: 15px;
+  }
+  
+  .form_prueba input,
+  .form_prueba nz-select,
+  .form_prueba button {
+    margin-bottom: 10px;
+  }
+  
+  .form_prueba input[type="text"],
+  .form_prueba input[type="tel"],
+  .form_prueba nz-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form_prueba nz-select {
+    width: 100%;
+  }
+  
+  .form_prueba button {
+    width: 100%;
+    padding: 8px;
+    background-color: #1890ff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .form_prueba button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .form_prueba table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+  }
+  
+  .form_prueba th,
+  .form_prueba td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .form_prueba th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .form_prueba tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .form_prueba a {
+    margin-right: 8px;
+    color: #1890ff;
+    cursor: pointer;
+  }
+  
+  .form_prueba a:hover {
+    text-decoration: underline;
+  }

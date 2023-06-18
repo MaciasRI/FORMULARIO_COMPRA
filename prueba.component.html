@@ -1,0 +1,38 @@
+<div class="form_prueba">
+    <input type="text" [(ngModel)]="pedido.nombreCliente" nz-input placeholder="Nombre cliente" />
+    <input type="text" [(ngModel)]="pedido.apellido" nz-input placeholder="Apellido cliente" />
+    <input type="tel" [(ngModel)]="pedido.telefono" nz-input placeholder="Teléfono" />
+    <input type="text" [(ngModel)]="pedido.direccion" nz-input placeholder="Dirección de entrega" />
+    <nz-select [(ngModel)]="pedido.producto" nzPlaceHolder="Seleccionar producto">
+      <nz-option *ngFor="let producto of listaProductos" [nzValue]="producto" [nzLabel]="producto"></nz-option>
+    </nz-select>
+    <input type="number" [(ngModel)]="pedido.cantidad" nz-input placeholder="Cantidad" />
+    <button [disabled]="!pedido.nombreCliente || !pedido.apellido || !pedido.telefono || !pedido.direccion || !pedido.producto || !pedido.cantidad" nzType="primary" (click)="guardarPedido()">Guardar</button>
+    <nz-table>
+      <thead>
+        <tr>
+          <th>Nombre </th>
+          <th>Apellido </th>
+          <th>Teléfono </th>
+          <th>Dirección </th>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pedido of listaPedidos; let i = index">
+          <td>{{ pedido.nombreCliente }}</td>
+          <td>{{ pedido.apellido }}</td>
+          <td>{{ pedido.telefono }}</td>
+          <td>{{ pedido.direccion }}</td>
+          <td>{{ pedido.producto }}</td>
+          <td>{{ pedido.cantidad }}</td>
+          <td>
+            <a (click)="eliminarPedido(i)">Eliminar</a>
+            <a (click)="editarPedido(pedido)">Editar</a>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
