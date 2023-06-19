@@ -7,18 +7,18 @@ import { Route } from "@angular/router";
   styleUrls: ["./prueba.component.css"]
 })
 export class PruebaComponent {
-  listaProductos: string[] = ["camiseta", "Pantalon", "Zapatos"];
+  listaProductos: string[] = ["Individual", "doble", "Suite"];
   listaPedidos: any[] = [];
   modoEdicion = false;
   pedidoEdicionIndex: number | null = null;
 
   pedido: any = {
-    nombreCliente: "",
+    Cliente: "",
     apellido: "",
     telefono: "",
-    direccion: "",
-    producto: "",
-    cantidad: 0
+    Cooreo: "",
+    habitacion: "",
+    persona: ""
   };
 
   
@@ -49,9 +49,9 @@ export class PruebaComponent {
       nombreCliente: "",
       apellido: "",
       telefono: "",
-      direccion: "",
-      producto: "",
-      cantidad: 0
+      Correo: "",
+      habitacion: "",
+      persona: 0
     };
   }
 }
